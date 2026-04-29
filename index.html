@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undone in Pattaya — Finn Coyne</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #6b2d82;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #c8c9a0;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .cover-panel {
+    background: #e8192c;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px 18px 24px;
+  }
+
+  .cover-big-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    line-height: 0.88;
+    color: #c8c9a0;
+    letter-spacing: -1px;
+  }
+
+  .cover-author {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    line-height: 1;
+    color: #c8c9a0;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+
+  .info-panel {
+    background: #6b2d82;
+    padding: 36px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #e8192c;
+    font-weight: 600;
+  }
+
+  .main-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 60px;
+    line-height: 0.9;
+    color: #c8c9a0;
+    letter-spacing: 1px;
+  }
+
+  .author-name {
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(200,201,160,0.55);
+    font-weight: 300;
+    margin-top: 10px;
+  }
+
+  .rule { width: 40px; height: 3px; background: #e8192c; }
+
+  .description {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(200,201,160,0.85);
+    max-width: 340px;
+  }
+
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #c8c9a0;
+    border: 1px solid rgba(200,201,160,0.3);
+    padding: 4px 12px;
+    font-weight: 600;
+  }
+
+  .footer-strip {
+    background: #3d1550;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-cell {
+    padding: 20px 28px;
+    border-right: 1px solid rgba(200,201,160,0.1);
+  }
+
+  .footer-cell:last-child { border-right: none; }
+
+  .fc-label {
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #e8192c;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .fc-value {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(200,201,160,0.65);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 600px) {
+    .hero { grid-template-columns: 1fr; }
+    .info-panel { padding: 28px 20px; }
+    .footer-strip { grid-template-columns: 1fr; }
+    .footer-cell { border-right: none; border-bottom: 1px solid rgba(200,201,160,0.1); }
+  }
+</style>
+</head>
+<body>
+
+<div style="max-width:1100px; margin:0 auto;">
+  <div class="hero">
+    <div class="cover-panel">
+      <div class="cover-big-title">UN-<br>DONE<br>IN<br>PAT-<br>TAYA</div>
+      <div class="cover-author">FINN<br>COYNE</div>
+    </div>
+
+    <div class="info-panel">
+      <p class="eyebrow">New Release</p>
+      <div>
+        <div class="main-title">UNDONE<br>IN<br>PATTAYA</div>
+        <p class="author-name">by Finn Coyne</p>
+      </div>
+      <div class="rule"></div>
+      <p class="description">
+        A novel set in Thailand's most electric city. One man searches for a missing friend through a labyrinth of booze, sex and betrayal. Coyne takes the reader on a humorous and often poignant journey through the garish seaside resort town.
+      </p>
+      <div class="tags">
+        <span class="tag">Expat Fiction</span>
+        <span class="tag">Noir</span>
+        <span class="tag">Thailand</span>
+        <span class="tag">Debut Novel</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-strip">
+    <div class="footer-cell">
+      <p class="fc-label">Genre</p>
+      <p class="fc-value">Expat Fiction · Noir · Southeast Asia</p>
+    </div>
+    <div class="footer-cell">
+      <p class="fc-label">For readers of</p>
+      <p class="fc-value">Bangkok 8 · The Beach · Sightseeing</p>
+    </div>
+    <div class="footer-cell">
+      <p class="fc-label">Author</p>
+      <p class="fc-value">Finn Coyne</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
