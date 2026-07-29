@@ -10,96 +10,120 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    background: #6b2d82;
+    background: #0d0d0d;
     font-family: 'Barlow Condensed', sans-serif;
     color: #c8c9a0;
     overflow-x: hidden;
   }
 
-  .hero {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .cover-panel {
+  /* TOP BAR */
+  .top-bar {
     background: #e8192c;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 20px 18px 24px;
-  }
-
-  .cover-big-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 80px;
-    line-height: 0.88;
-    color: #c8c9a0;
-    letter-spacing: -1px;
-  }
-
-  .cover-author {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 40px;
-    line-height: 1;
-    color: #c8c9a0;
-    letter-spacing: 1px;
-    margin-top: 10px;
-  }
-
-  .info-panel {
-    background: #6b2d82;
-    padding: 36px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .eyebrow {
+    text-align: center;
+    padding: 10px 20px;
     font-size: 11px;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: #e8192c;
+    color: #c8c9a0;
     font-weight: 600;
   }
 
-  .main-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 60px;
-    line-height: 0.9;
-    color: #c8c9a0;
-    letter-spacing: 1px;
+  /* HERO */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 92vh;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  .author-name {
-    font-size: 14px;
-    letter-spacing: 4px;
+  /* LEFT — title block */
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px 80px 48px;
+    border-right: 1px solid rgba(200,201,160,0.1);
+  }
+
+  .pre-title {
+    font-size: 11px;
+    letter-spacing: 6px;
     text-transform: uppercase;
-    color: rgba(200,201,160,0.55);
-    font-weight: 300;
-    margin-top: 10px;
+    color: #e8192c;
+    font-weight: 600;
+    margin-bottom: 24px;
   }
 
-  .rule { width: 40px; height: 3px; background: #e8192c; }
+  .big-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(80px, 10vw, 140px);
+    line-height: 0.86;
+    color: #c8c9a0;
+    letter-spacing: -2px;
+  }
+
+  .big-title .in {
+    display: block;
+    font-size: clamp(32px, 4vw, 56px);
+    color: rgba(200,201,160,0.35);
+    letter-spacing: 8px;
+    margin: 10px 0 6px;
+  }
+
+  .big-title .location {
+    display: block;
+    color: #e8192c;
+  }
+
+  .author-line {
+    margin-top: 32px;
+    font-size: 13px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(200,201,160,0.4);
+    font-weight: 300;
+  }
+
+  /* RIGHT — info block */
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 48px 80px 60px;
+    gap: 36px;
+  }
+
+  .tagline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    line-height: 1.1;
+    color: #c8c9a0;
+    border-left: 4px solid #e8192c;
+    padding-left: 20px;
+  }
+
+  .rule { width: 40px; height: 2px; background: rgba(200,201,160,0.2); }
 
   .description {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 300;
-    line-height: 1.7;
-    color: rgba(200,201,160,0.85);
-    max-width: 340px;
+    line-height: 1.8;
+    color: rgba(200,201,160,0.75);
   }
 
-  .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
 
   .tag {
     font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #c8c9a0;
-    border: 1px solid rgba(200,201,160,0.3);
+    color: rgba(200,201,160,0.6);
+    border: 1px solid rgba(200,201,160,0.2);
     padding: 4px 12px;
     font-weight: 600;
   }
@@ -107,14 +131,14 @@
   .btn-amazon {
     display: inline-block;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     letter-spacing: 3px;
-    color: #6b2d82;
+    color: #0d0d0d;
     background: #c8c9a0;
-    padding: 14px 32px;
+    padding: 16px 40px;
     text-decoration: none;
-    transition: background 0.2s, color 0.2s;
     align-self: flex-start;
+    transition: background 0.2s, color 0.2s;
   }
 
   .btn-amazon:hover {
@@ -122,18 +146,18 @@
     color: #c8c9a0;
   }
 
-  .footer-strip {
-    background: #3d1550;
-    max-width: 1100px;
+  /* FOOTER */
+  .footer {
+    border-top: 1px solid rgba(200,201,160,0.08);
+    max-width: 1200px;
     margin: 0 auto;
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 
   .footer-cell {
-    padding: 20px 28px;
-    border-right: 1px solid rgba(200,201,160,0.1);
+    padding: 28px 40px;
+    border-right: 1px solid rgba(200,201,160,0.08);
   }
 
   .footer-cell:last-child { border-right: none; }
@@ -144,66 +168,68 @@
     text-transform: uppercase;
     color: #e8192c;
     font-weight: 600;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
 
   .fc-value {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 300;
-    color: rgba(200,201,160,0.65);
-    line-height: 1.5;
+    color: rgba(200,201,160,0.5);
+    line-height: 1.6;
   }
 
-  @media (max-width: 600px) {
-    .hero { grid-template-columns: 1fr; }
-    .info-panel { padding: 28px 20px; }
-    .footer-strip { grid-template-columns: 1fr; }
-    .footer-cell { border-right: none; border-bottom: 1px solid rgba(200,201,160,0.1); }
+  @media (max-width: 700px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 48px 24px 32px; border-right: none; border-bottom: 1px solid rgba(200,201,160,0.1); }
+    .hero-right { padding: 40px 24px 48px; }
+    .footer { grid-template-columns: 1fr; }
+    .footer-cell { border-right: none; border-bottom: 1px solid rgba(200,201,160,0.08); }
   }
 </style>
 </head>
 <body>
 
-<div style="max-width:1100px; margin:0 auto;">
-  <div class="hero">
-    <div class="cover-panel">
-      <div class="cover-big-title">UN-<br>DONE<br>IN<br>PAT-<br>TAYA</div>
-      <div class="cover-author">FINN<br>COYNE</div>
-    </div>
+<div class="top-bar">Now Available</div>
 
-    <div class="info-panel">
-      <p class="eyebrow">New Release</p>
-      <div>
-        <div class="main-title">UNDONE<br>IN<br>PATTAYA</div>
-        <p class="author-name">by Finn Coyne</p>
-      </div>
-      <div class="rule"></div>
-      <p class="description">
-        A novel set in Thailand's most electric city. One man searches for a missing friend through a labyrinth of booze, sex and betrayal. Coyne takes the reader on a humorous and often poignant journey through the garish seaside resort town.
-      </p>
-      <div class="tags">
-        <span class="tag">Expat Fiction</span>
-        <span class="tag">Noir</span>
-        <span class="tag">Thailand</span>
-        <span class="tag">Debut Novel</span>
-      </div>
-      <a class="btn-amazon" href="https://www.amazon.com/dp/B0HBCHW56X" target="_blank">Buy on Amazon</a>
+<div class="hero">
+  <div class="hero-left">
+    <p class="pre-title">A Novel by Finn Coyne</p>
+    <div class="big-title">
+      UNDONE
+      <span class="in">IN</span>
+      <span class="location">PATTAYA</span>
     </div>
+    <p class="author-line">Finn Coyne</p>
   </div>
 
-  <div class="footer-strip">
-    <div class="footer-cell">
-      <p class="fc-label">Genre</p>
-      <p class="fc-value">Expat Fiction · Noir · Southeast Asia</p>
+  <div class="hero-right">
+    <div class="tagline">He's too drunk to be a hero.<br>That's not stopping him.</div>
+    <div class="rule"></div>
+    <p class="description">
+      A novel set in Thailand's most electric city. One man searches for a missing friend through a labyrinth of booze, sex and betrayal. Coyne takes the reader on a humorous and often poignant journey through the garish seaside resort town.
+    </p>
+    <div class="tags">
+      <span class="tag">Expat Fiction</span>
+      <span class="tag">Noir</span>
+      <span class="tag">Thailand</span>
+      <span class="tag">Debut Novel</span>
     </div>
-    <div class="footer-cell">
-      <p class="fc-label">For readers of</p>
-      <p class="fc-value">Bangkok 8 · The Beach · Sightseeing</p>
-    </div>
-    <div class="footer-cell">
-      <p class="fc-label">Author</p>
-      <p class="fc-value">Finn Coyne</p>
-    </div>
+    <a class="btn-amazon" href="https://www.amazon.com/dp/B0HBCHW56X" target="_blank">Buy on Amazon</a>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-cell">
+    <p class="fc-label">Genre</p>
+    <p class="fc-value">Expat Fiction · Noir · Southeast Asia</p>
+  </div>
+  <div class="footer-cell">
+    <p class="fc-label">For readers of</p>
+    <p class="fc-value">Bangkok 8 · The Beach · Sightseeing</p>
+  </div>
+  <div class="footer-cell">
+    <p class="fc-label">Author</p>
+    <p class="fc-value">Finn Coyne</p>
   </div>
 </div>
 
